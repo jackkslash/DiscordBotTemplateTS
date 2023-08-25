@@ -14,11 +14,13 @@ client.once("ready", async () => {
   console.log("Alive");
 });
 
+// bot slash commands
 client.on("interactionCreate", async (interaction: any) => {
   commandCheck(interaction);
   eventCheck(interaction);
 });
 
+// message bot directly
 client.on("message", async (interaction: any) => {
   commandCheck(interaction);
   eventCheck(interaction);
